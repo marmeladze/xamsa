@@ -1,0 +1,60 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+en:
+  devise:
+    confirmations:
+      confirmed: "Sizin hesab uğurla təsdiqləndi."
+      send_instructions: "Hesabınızı təsdiqləmək üçün email məktubunu bir neçə dəqiqə ərzində alacaqsınız."
+      send_paranoid_instructions: "Əgər sizin email ünvanınız bizim bazada mövcuddursa, hesabınızı təsdiqləmək üçün təlimatları bir neçə dəqiqə alacaqsınız."
+    failure:
+      already_authenticated: "Siz artıq daxil olmusunuz."
+      inactive: "Sizin hesab hələ təsdiqlənməyib."
+      invalid: "Email və ya parol səhvdir."
+      locked: "Sizin hesab bağlıdır."
+      last_attempt: "Sizin hesab bağlanmamışdan əvvəl daha bir şansınız var."
+      not_found_in_database: "Email və ya parol səhvdir."
+      timeout: "Sizin seans bitmişdir. Davam etmək üçün daxil olmanız lazımdır."
+      unauthenticated: "Davam etmək üçün daxil olmaq və ya qeydiyyatdan keçmək lazımdır."
+      unconfirmed: "Davam etmək üçün hesabınızı təsdiqləməniz lazımdır."
+    mailer:
+      confirmation_instructions:
+        subject: "Təsdiq təlimatları"
+      reset_password_instructions:
+        subject: "Parolun sıfırlanması təlimatları"
+      unlock_instructions:
+        subject: "Açılış təlimatları"
+    omniauth_callbacks:
+      failure: "%{kind} hesabı ilə daxil olmaq mümkün olmadı. Çünki \"%{reason}\"."
+      success: "%{kind} hesabı ilə uğurla daxil oldunuz."
+    passwords:
+      no_token: "Bu səhifəni görmək üçün parolun sıfırlanması üçün göndərilmiş email-dan gəlmək lazımdır. Əgər siz belə bir email-dan gəlirsinizsə, onda URL-in tamlığına əmin olun."
+      send_instructions: "Parolun sıfırlanması ilə bağlı təlimatları bir neçə dəqiqə ərzində email formasında alacaqsınız."
+      send_paranoid_instructions: "Əgər sizin email bizim bazada mövcuddursa, parolun sıfırlanması ilə bağlı təlimatları bir neçə dəqiqə ərzində alacaqsınız."
+      updated: "Sizin parol uğurla yeniləndi. Siz artıq daxil olmusunuz."
+      updated_not_active: "Sizin parol uğurla yeniləndi."
+    registrations:
+      destroyed: "Hələlik! Sizin hesab uğurla ləğv edildi. Tezliklə qayıdacağınıza ümid edirik."
+      signed_up: "Xoş gəldin! Siz uğurla qeydiyyatdan keçdiniz."
+      signed_up_but_inactive: "Siz uğurla qeydiyyatdan keçdiniz. Ancaq hesabınız aktiv olmadığı üçün siz sistemə daxil ola bilmədiniz."
+      signed_up_but_locked: "Siz uğurla qeydiyyatdan keçdiniz. Ancaq hesabınız bağlı olduğu üçün siz sistemə daxil ola bilmədiniz."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
+      signed_up_but_unconfirmed: "Təsdiq linki sizin email-a göndərildi. Hesabınızı təsdiqləmək üçün həmin linkdən istifadə etməyinizi xahiş edirəm."
+      update_needs_confirmation: "Sizin hesab uğurla yeniləndi, lakin mən sizin yeni email-nızı yoxlamalıyam. Xahiş edirəm yeni email-a göndərilmiş linkdən istifadə edəsiniz."
+      updated: "Sizin hesab uğurla yeniləndi."
+    sessions:
+      signed_in: "Sistemə uğurla daxil oldunuz."
+      signed_out: "Sistemdən rahat çıxdınız."
+    unlocks:
+      send_instructions: "Bir neçə dəqiqə ərzində hesabınızı açmaq ilə bağlı təlimatları email formasında alacaqsınız."
+      send_paranoid_instructions: "Əgər sizin email mövcuddursa, hesabınızı açmaq ilə bağlı təlimatları email formasında bir neçə dəqiqə ərzində alacaqsınız."
+      unlocked: "Sizin hesab uğurla açıldı. Davam etmək üçün daxil olun."
+  errors:
+    messages:
+      already_confirmed: "artıq təsdiqlənib. Davam etmək üçün daxil olun."
+      confirmation_period_expired: "%{period} ərzində təsdiqlənməlidir, əks halda yenidən cəhd edin"
+      expired: "vaxtı keçib, yenidən cəhd edin"
+      not_found: "tapılmadı"
+      not_locked: "bağlı deyildi"
+      not_saved:
+        one: "1 xəta %{resource} yadda saxlanmasının qarşısını aldı:"
+        other: "%{count} xəta %{resource} yadda saxlanmasının qarşısını aldı:"

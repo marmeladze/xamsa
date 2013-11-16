@@ -1,4 +1,4 @@
-pt-BR:
+az:
   date:
     abbr_day_names:
     - Baz
@@ -69,13 +69,13 @@ pt-BR:
       half_a_minute: yarım dəqiqə
       less_than_x_minutes:
         one: bir dəqiqədən az
-        other: %{count} dəqiqədən az
+        other: ! '%{count} dəqiqədən az'
       less_than_x_seconds:
         one: bir saniyədən az
-        other: %{count} saniyədən az
+        other: ! '%{count} saniyədən az'
       over_x_years:
         one: 1 ildən çox
-        other: %{count} ildən çox
+        other: ! '%{count} ildən çox'
       x_days:
         one: 1 gün
         other: ! '%{count} gün'
@@ -99,7 +99,7 @@ pt-BR:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: deve ser aceito
-      blank: não pode ficar em branco
+      blank: boş ola bilməz
       confirmation: não está de acordo com a confirmação
       empty: não pode ficar vazio
       equal_to: deve ser igual a %{count}
@@ -128,9 +128,9 @@ pt-BR:
     select:
       prompt: Seçin
     submit:
-      create: %{model} yarat
-      submit: %{model} göndər
-      update: %{model} yenilə
+      create: ! '%{model} yarat'
+      submit: ! '%{model} göndər'
+      update: ! '%{model} yenilə'
   number:
     currency:
       format:
@@ -205,3 +205,4 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+
