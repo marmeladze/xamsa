@@ -38,7 +38,6 @@ group :development do
 end
 
 group :test do
-  gem 'sqlite3'
   # See https://github.com/thoughtbot/shoulda-matchers/issues/270
   gem "shoulda-matchers",   '2.4.0'
   gem 'simplecov',          '0.7.1', require: false

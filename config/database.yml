@@ -8,7 +8,11 @@ development:
   template: template0
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: xamsa_test
   pool: 5
-  timeout: 5000
+  username: postgres
+  min_messages: WARNING
+  host: localhost
+  template: template0
