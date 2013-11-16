@@ -1,22 +1,43 @@
 h2 Qeydiyyat forması
 
-- form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
+
+  div
+    = f.label :full_name, 'Tam ad'
+    br
+    = f.text_field :full_name, :autofocus => true
+
+  div
+    = f.label :birthday, 'Təvəllüd'
+    br
+    = f.text_field :birthday
+
+  div
+    = f.label :sex, 'Cins'
+    br
+    = f.text_field :sex
+    = f.select :sex, [['Kişi', false], ['Qadın', true]]
 
   div
     = f.label :email
     br
-    = f.email_field :email, :autofocus => true
+    = f.email_field :email
 
   div
-    = f.label :password
+    = f.label :password, 'Parol'
     br
     = f.password_field :password
 
   div
-    = f.label :password_confirmation
+    = f.label :password_confirmation, 'Təkrar parol'
     br
     = f.password_field :password_confirmation
+
+  div
+    = f.label :terms_of_service, 'Mən istifadəçi qaydalarını qəbul edirəm'
+    br
+    = f.check_box :terms_of_service
 
   div
     = f.submit 'Qeydiyyatdan keç'

@@ -4,5 +4,7 @@ class Player < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :full_name, presence: true
+  validates :full_name, :birthday, :sex, presence: true
+
+  validates :terms_of_service, acceptance: true
 end
