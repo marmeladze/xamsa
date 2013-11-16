@@ -17,6 +17,7 @@ gem 'uglifier',           '>= 1.3.0'
 gem 'rack-canonical-host',  '0.0.8'
 gem 'bourbon',              '3.1.8'
 gem 'devise',               '~> 3.2.1'
+gem 'coveralls', require: false
 gem "rails_12factor",       "0.0.2", group: :production
 # gem 'paperclip',            '3.4.2'
 # gem 'aws-sdk',              '1.11.2'
