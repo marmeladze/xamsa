@@ -2,8 +2,8 @@
 require 'spec_helper'
 
 describe "Homepage", :type => :request do
-  xit {
+  it {
     visit root_path
-    page.should have_content('Copyright &copy; 2012 App')
+    expect(page).to have_link('Qeydiyyat')
   }
 end
