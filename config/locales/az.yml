@@ -1,53 +1,53 @@
 pt-BR:
   date:
     abbr_day_names:
-    - Dom
-    - Seg
-    - Ter
-    - Qua
-    - Qui
-    - Sex
-    - Sáb
+    - Baz
+    - B.e
+    - Ç.a
+    - Çər
+    - C.a
+    - Cüm
+    - Şən
     abbr_month_names:
     - 
-    - Jan
+    - Yan
     - Fev
     - Mar
-    - Abr
-    - Mai
-    - Jun
-    - Jul
-    - Ago
-    - Set
-    - Out
-    - Nov
-    - Dez
+    - Apr
+    - May
+    - İyn
+    - İyl
+    - Avq
+    - Sen
+    - Okt
+    - Noy
+    - Dek
     day_names:
-    - Domingo
-    - Segunda
-    - Terça
-    - Quarta
-    - Quinta
-    - Sexta
-    - Sábado
+    - Bazar günü
+    - Bazar ertəsi
+    - Çərşənbə axşamı
+    - Çərşənbə günü
+    - Cümə axşamı
+    - Cümə günü
+    - Şənbə günü
     formats:
       default: ! '%d/%m/%Y'
       long: ! '%d de %B de %Y'
       short: ! '%d de %B'
     month_names:
     - 
-    - Janeiro
-    - Fevereiro
-    - Março
-    - Abril
-    - Maio
-    - Junho
-    - Julho
-    - Agosto
-    - Setembro
-    - Outubro
-    - Novembro
-    - Dezembro
+    - Yanvar
+    - Fevral
+    - Mart
+    - Aprel
+    - May
+    - İyun
+    - İyul
+    - Avqust
+    - Sentyabr
+    - Oktyabr
+    - Noyabr
+    - Dekabr
     order:
     - :day
     - :month
@@ -55,46 +55,46 @@ pt-BR:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: aproximadamente 1 hora
-        other: aproximadamente %{count} horas
+        one: təxminən 1 saat
+        other: təxminən %{count} saat
       about_x_months:
-        one: aproximadamente 1 mês
-        other: aproximadamente %{count} meses
+        one: təxminən 1 ay
+        other: təxminən %{count} ay
       about_x_years:
-        one: aproximadamente 1 ano
-        other: aproximadamente %{count} anos
+        one: təxminən 1 il
+        other: təxminən %{count} il
       almost_x_years:
-        one: quase 1 ano
-        other: quase %{count} anos
-      half_a_minute: meio minuto
+        one: demək olar ki 1 il
+        other: demək olar ki %{count} il
+      half_a_minute: yarım dəqiqə
       less_than_x_minutes:
-        one: menos de um minuto
-        other: menos de %{count} minutos
+        one: bir dəqiqədən az
+        other: %{count} dəqiqədən az
       less_than_x_seconds:
-        one: menos de 1 segundo
-        other: menos de %{count} segundos
+        one: bir saniyədən az
+        other: %{count} saniyədən az
       over_x_years:
-        one: mais de 1 ano
-        other: mais de %{count} anos
+        one: 1 ildən çox
+        other: %{count} ildən çox
       x_days:
-        one: 1 dia
-        other: ! '%{count} dias'
+        one: 1 gün
+        other: ! '%{count} gün'
       x_minutes:
-        one: 1 minuto
-        other: ! '%{count} minutos'
+        one: 1 dəqiqə
+        other: ! '%{count} dəqiqə'
       x_months:
-        one: 1 mês
-        other: ! '%{count} meses'
+        one: 1 ay
+        other: ! '%{count} dəqiqə'
       x_seconds:
-        one: 1 segundo
-        other: ! '%{count} segundos'
+        one: 1 saniyə
+        other: ! '%{count} saniyə'
     prompts:
-      day: Dia
-      hour: Hora
-      minute: Minuto
-      month: Mês
-      second: Segundo
-      year: Ano
+      day: Gün
+      hour: Saat
+      minute: Dəqiqə
+      month: Ay
+      second: Saniyə
+      year: İl
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
@@ -126,11 +126,11 @@ pt-BR:
         other: ! 'Não foi possível gravar %{model}: %{count} erros.'
   helpers:
     select:
-      prompt: Por favor selecione
+      prompt: Seçin
     submit:
-      create: Criar %{model}
-      submit: Salvar %{model}
-      update: Atualizar %{model}
+      create: %{model} yarat
+      submit: %{model} göndər
+      update: %{model} yenilə
   number:
     currency:
       format:
@@ -140,7 +140,7 @@ pt-BR:
         separator: ! ','
         significant: false
         strip_insignificant_zeros: false
-        unit: R$
+        unit: AZN
     format:
       delimiter: .
       precision: 3
@@ -152,18 +152,18 @@ pt-BR:
         format: ! '%n %u'
         units:
           billion:
-            one: bilhão
-            other: bilhões
+            one: milyard
+            other: milyard
           million:
-            one: milhão
-            other: milhões
+            one: milyon
+            other: milyon
           quadrillion:
-            one: quatrilhão
-            other: quatrilhões
-          thousand: mil
+            one: kvadrilyon
+            other: kvadrilyon
+          thousand: min
           trillion:
-            one: trilhão
-            other: trilhões
+            one: trilyon
+            other: trilyon
           unit: ''
       format:
         delimiter: .
@@ -174,8 +174,8 @@ pt-BR:
         format: ! '%n %u'
         units:
           byte:
-            one: Byte
-            other: Bytes
+            one: Bayt
+            other: Bayt
           gb: GB
           kb: KB
           mb: MB
