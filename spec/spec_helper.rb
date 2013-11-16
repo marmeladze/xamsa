@@ -8,6 +8,7 @@ if ENV['coverage'] == 'on'
   SimpleCov.start 'rails' do
     minimum_coverage 100
     add_filter '/.gems'
+    add_filter '/spec/support'
   end
 end
 
