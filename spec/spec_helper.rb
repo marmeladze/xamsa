@@ -1,16 +1,12 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 
 if ENV['coverage'] == 'on'
-  require 'codeclimate-test-reporter'
   require 'simplecov'
   require 'coveralls'
 
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    Coveralls::SimpleCov::Formatter,
-    SimpleCov::Formatter::HTMLFormatter,
-    CodeClimate::TestReporter::Formatter
-  ]
+  Coveralls.wear!('rails')
 
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
   SimpleCov.start 'rails' do
     minimum_coverage 100
     add_filter '/.gems'

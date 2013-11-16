@@ -40,7 +40,6 @@ group :test do
   # See https://github.com/thoughtbot/shoulda-matchers/issues/270
   gem "shoulda-matchers",   '2.4.0'
   gem 'simplecov',          '0.7.1', require: false
-  gem 'codeclimate-test-reporter'
   gem 'coveralls', require: false
   gem 'email_spec',         '1.4.0'
   gem 'capybara',           '2.1.0'
