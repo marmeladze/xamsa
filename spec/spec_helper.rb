@@ -1,6 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 
-if ENV['coverage'] == 'on'
+if ENV['coverage'] == 'on' or ENV['TRAVIS'] == true
   require 'simplecov'
   require 'coveralls'
 
