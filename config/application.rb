@@ -38,5 +38,6 @@ module Xamsa
     config.i18n.default_locale = :"az"
     config.i18n.locale = :"az"
 
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end
