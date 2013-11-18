@@ -1,0 +1,25 @@
+doctype 5
+html
+  head
+    meta charset="utf-8" 
+    meta name="keywords" content="" 
+    meta name="description" content=""
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title= yield(:title) + "Xəmsə Milli İntellektual oyunu"
+
+    link href="/favicon.ico" rel=("shortcut icon") 
+    = yield(:header_tags)
+
+    = stylesheet_link_tag "application", :type => nil, :media => "all"
+    = javascript_include_tag "application", :type => nil, "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+    /![if lt IE 9]
+      script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
+
+  body id=controller.controller_name 
+    .container
+      render 'flash_messages'
+      render 'error_messages'
+      = yield
