@@ -5,3 +5,11 @@
 body {
   font-family: $helvetica;
 }
+
+.fixed {
+  position: absolute;
+}
+
+.container {
+  max-width: 1050px;
+}

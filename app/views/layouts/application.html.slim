@@ -19,7 +19,8 @@ html
       script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
 
   body id=controller.controller_name 
+    .fixed
+      == render 'flash_messages'
+      == render 'error_messages'
     .container
-      render 'flash_messages'
-      render 'error_messages'
       = yield

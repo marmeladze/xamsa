@@ -1,4 +1,4 @@
-- if object.errors.any?
+- if defined?(object) and object.errors.any?
   div class="alert alert-warning alert-dismissable"
     ul
     - object.errors.full_messages.each do |message|
