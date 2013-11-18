@@ -4,6 +4,7 @@
 
 body {
   font-family: $helvetica;
+  background-color: #dedede;
 }
 
 .fixed {
@@ -12,4 +13,22 @@ body {
 
 .container {
   max-width: 1050px;
+}
+
+.navbar {
+  height: 48px;
+  background: image-url("navbar.png");
+  margin-bottom: 0px;
+
+  .navbar-brand, a {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.main {
+  background: image-url("green-back.jpg");
 }

@@ -1,0 +1,9 @@
+nav class="navbar navbar-default navbar-static-top" role="navigation"
+  .container
+    a class="navbar-brand" href="#{root_path}" Xəmsə
+
+    .pull-right
+      - if current_player
+        = current_player.full_name
+      - else
+        = link_to "Qeydiyyat", new_player_registration_path
