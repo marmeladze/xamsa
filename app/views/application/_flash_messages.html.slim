@@ -1,0 +1,6 @@
+if flash
+  div class="alert alert-info alert-dismissable"
+    ul
+    - flash.each do |key, value|
+      li id="flash_#{key}"
+        = value
