@@ -1,6 +1,8 @@
 nav class="navbar navbar-default navbar-static-top" role="navigation"
   .container
-    a class="navbar-brand" href="#{root_path}" Xəmsə
+    a class="navbar-brand" href="#{root_path}"
+      = image_tag "favicon.png"
+      = "Xəmsə"
 
     .pull-right
       - if player_signed_in?

@@ -23,16 +23,23 @@ body {
 
   .navbar-brand, a {
     color: white;
+    margin-top: -6px;
 
     &:hover {
       color: white;
+    }
+
+    img {
+      width: 30px;
+      vertical-align: sub;
+      margin-right: 4px;
     }
   }
 }
 
 .main {
   background: image-url("green-back.jpg");
-  padding-top: 35px;
+  padding: 40px;
 
   h2 {
     color: white;
