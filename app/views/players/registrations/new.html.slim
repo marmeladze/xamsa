@@ -16,7 +16,7 @@ h2 class="text-center" Qeydiyyat forması
       .form-group
         = f.label :sex, 'Cins', class: 'col-sm-4 control-label'
         .col-sm-8
-          = f.select :sex, [['Kişi', true], ['Qadın', false]], class: 'form-control'
+          = f.select :sex, [['Kişi', true], ['Qadın', false]], {}, class: 'form-control'
     .col-md-6
       .form-group
         = f.label :email, 'Email', class: 'col-sm-4 control-label'
