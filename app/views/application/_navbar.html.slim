@@ -3,4 +3,7 @@ nav class="navbar navbar-default navbar-static-top" role="navigation"
     a class="navbar-brand" href="#{root_path}" Xəmsə
 
     .pull-right
-      = link_to "Qeydiyyat", new_player_registration_path
+      - if player_signed_in?
+        = link_to 'Çıxış', destroy_player_session_path, method: :delete
+      - else
+        = link_to 'Giriş', new_player_session_path

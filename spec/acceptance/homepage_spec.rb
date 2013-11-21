@@ -8,7 +8,7 @@ describe "Homepage", :type => :request do
     expect(page).to have_link('Qeydiyyat')
 
     # go to registration page
-    click_link 'Qeydiyyat'
+    within('.main') { click_link 'Qeydiyyat' }
     expect(page).to have_content 'Qeydiyyat forması'
 
     fill_in 'Tam ad', with: 'Ali Ismayilov'
@@ -22,5 +22,8 @@ describe "Homepage", :type => :request do
     # go to welcome page
     click_on 'Qeydiyyatdan keç'
     expect(page).to have_content 'Xoş gəldin! Siz uğurla qeydiyyatdan keçdiniz.'
+
+    click_on 'Çıxış'
+    expect(page).to have_content 'Sistemdən rahat çıxdınız.'
   }
 end
