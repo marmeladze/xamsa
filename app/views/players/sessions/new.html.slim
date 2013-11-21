@@ -1,0 +1,23 @@
+.text-center
+  h2 Giriş
+
+  = form_for resource, as: resource_name, url: session_path(resource_name), html: { role: 'form', class: 'form-horizontal' } do |f|
+    .form-group
+      = f.label :email, class: 'col-sm-2 col-sm-offset-3 control-label'
+      .col-sm-4
+        = f.email_field :email, autofocus: true, class: 'form-control'
+    .form-group
+      = f.label :password, 'Parol', class: 'col-sm-2 col-sm-offset-3 control-label'
+      .col-sm-4
+        = f.password_field :password, class: 'form-control'
+
+    - if devise_mapping.rememberable?
+      .text-center
+        = f.label :remember_me
+          = f.check_box :remember_me
+          |  Məni yadda saxla
+
+    .text-center
+      = f.submit 'Giriş', class: 'btn btn-default'
+
+  = render "players/shared/links"

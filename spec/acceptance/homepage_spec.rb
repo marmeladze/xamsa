@@ -25,5 +25,14 @@ describe "Homepage", :type => :request do
 
     click_on 'Çıxış'
     expect(page).to have_content 'Sistemdən rahat çıxdınız.'
+
+    # login again
+    within('.main') { click_link 'Giriş' }
+
+    fill_in 'Email', with: 'ali@alii.pro'
+    fill_in 'Parol', with: 'parol123'
+
+    within('.main') { click_on 'Giriş' }
+    expect(page).to have_content 'Sistemə uğurla daxil oldunuz.'
   }
 end
