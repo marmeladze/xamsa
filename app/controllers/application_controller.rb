@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :birthday
     devise_parameter_sanitizer.for(:sign_up) << :sex
   end
+
+  def after_sign_in_path_for(resource)
+    games_path
+  end
 end
