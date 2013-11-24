@@ -9,6 +9,12 @@ body {
 
 .fixed {
   position: absolute;
+  width: 100%;
+
+  .alert {
+    width: 70%;
+    margin: 7px auto;
+  }
 }
 
 .container {
