@@ -2,6 +2,11 @@
 require 'spec_helper'
 
 describe "Game", type: :request do
+  before(:each) do
+    # populate db with question packs
+    5.times { FactoryGirl.create :question_pack }
+  end
+
   it {
     # go to homepage
     visit root_path
@@ -26,6 +31,6 @@ describe "Game", type: :request do
     click_on 'Oyuna başla'
 
     # game#start page
-    # expect(page.all("#questions li").count).to eql(5)
+    expect(page.all("#question_packs li").count).to eql(5)
   }
 end

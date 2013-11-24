@@ -5,6 +5,6 @@ class GamesController < ApplicationController
   end
 
   def new
-    
+    @question_packs = QuestionPack.limit 5
   end
 end
