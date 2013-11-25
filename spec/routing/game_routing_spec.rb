@@ -39,5 +39,5 @@ describe GamesController do
     it "game_path" do
       expect(game_path(:play)).to eq("/games/play")
     end
-  end      
+  end
 end
