@@ -7,4 +7,14 @@ class GamesController < ApplicationController
   def new
     @question_packs = QuestionPack.limit 5
   end
+
+  def create
+    session[:question_pack_id] = params[:question_pack]
+
+    redirect_to game_path(:play)
+  end
+
+  def show
+    
+  end
 end

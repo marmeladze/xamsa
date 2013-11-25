@@ -45,4 +45,23 @@ describe GamesController do
     end
   end
 
+  describe "GET 'post'" do
+    context "anonymous user" do
+      before do
+        post :create
+      end
+
+      it { should redirect_to new_player_session_url }
+    end
+
+    context "logged in user" do
+      before do
+        sign_in (@player = create(:player))
+        get :create
+      end
+
+      it { should redirect_to game_path(:play) }
+    end
+  end
+
 end

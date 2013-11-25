@@ -1,3 +1,6 @@
 ul#question_packs
-  - @question_packs.each do |question_pack|
-    li= question_pack.title
+  = form_tag games_path, method: :post
+    - @question_packs.each do |question_pack|
+      li
+        = question_pack.title
+        = hidden_field_tag 'question_pack', question_pack.id

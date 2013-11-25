@@ -13,24 +13,16 @@ describe GamesController do
       expect(get("/games/new")).to route_to("games#new")
     end
 
-    xit "routes to #create" do
-      expect(game("/games")).to route_to("games#create")
+    it "routes to #create" do
+      expect(post("/games")).to route_to("games#create")
     end
 
-    xit "routes to #show" do
-      expect(get("/games/1")).to route_to("games#show", id: "1")
+    it "routes to #show" do
+      expect(get("/games/play")).to route_to("games#show", id: "play")
     end
 
     xit "routes to #destroy" do
       expect(delete("/games/1")).to route_to("games#destroy", :id => "1")
-    end
-
-    xit "routes to #edit" do
-      expect(get("/games/1/edit")).to route_to("games#edit", :id => "1")
-    end
-
-    xit "routes to #update" do
-      expect(put("/games/1")).to route_to("games#update", :id => "1")
     end
   end
 
@@ -44,12 +36,8 @@ describe GamesController do
       expect(new_game_path).to eq("/games/new")
     end
 
-    xit "game_path" do
-      expect(game_path(1)).to eq("/games/1")
-    end
-
-    xit "edit_game_path" do
-      expect(edit_game_path(1)).to eq("/games/1/edit")
+    it "game_path" do
+      expect(game_path(:play)).to eq("/games/play")
     end
   end      
 end

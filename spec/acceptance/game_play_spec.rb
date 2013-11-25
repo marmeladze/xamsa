@@ -21,5 +21,9 @@ describe "Game", type: :request, js: true do
     # click on question packs to remove them
     first('#question_packs li').click
     expect(page.all("#question_packs li").count).to eql(4)
+
+    3.times { first('#question_packs li').click }
+    # when there's last question pack left it should be redirected to the game play page
+    expect(current_path).to eql(game_path(:play))
   }
 end
