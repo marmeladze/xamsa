@@ -13,7 +13,7 @@ describe GamesController do
 
     context "logged in user" do
       before do
-        sign_in (@player = FactoryGirl.create(:player))
+        sign_in (@player = create(:player))
         get :index
       end
 
@@ -34,8 +34,8 @@ describe GamesController do
 
     context "logged in user" do
       before do
-        sign_in (@player = FactoryGirl.create(:player))
-        5.times { FactoryGirl.create :question_pack }
+        sign_in (@player = create(:player))
+        5.times { create :question_pack }
         get :index
       end
 

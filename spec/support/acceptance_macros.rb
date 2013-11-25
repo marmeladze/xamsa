@@ -2,11 +2,11 @@
 module AcceptanceMacros
   def login!
     before(:each) do
-      @current_user = User.make(:email => 'x@example.com', :password => 'senha123', :password_confirmation => 'senha123')
-      visit new_user_session_path
-      fill_in 'Email', :with => 'x@example.com'
-      fill_in 'Senha', :with => 'senha123'
-      click_button 'Entrar'
+      @current_player = create :player
+      visit new_player_session_path
+      fill_in 'Email', with: @current_player.email
+      fill_in 'Parol', with: 'changeme'
+      within('form') { click_on 'Giriş' }
     end
   end
 end
