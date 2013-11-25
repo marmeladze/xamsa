@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20131125233119) do
     t.datetime "updated_at"
   end
 
-  add_index "questions", ["order"], name: "index_questions_on_order", using: :btree
   add_index "questions", ["question_pack_id"], name: "index_questions_on_question_pack_id", using: :btree
 
 end
