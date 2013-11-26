@@ -4,7 +4,10 @@ require 'spec_helper'
 describe "Game", type: :request, js: true do
   before(:each) do
     # populate db with question packs
-    5.times { create :question_pack }
+    5.times do
+      question_pack = create :question_pack
+      (1..5).each { |order| create :question, question_pack: question_pack, order: order }
+    end
   end
 
   login!
@@ -25,5 +28,7 @@ describe "Game", type: :request, js: true do
     3.times { first('#question_packs li').click }
     # when there's last question pack left it should be redirected to the game play page
     expect(current_path).to eql(game_path(:play))
+
+    expect(page).to have_content 'Bakı şəhəri məhz bu dənizin sahilində yerləşir'
   }
 end

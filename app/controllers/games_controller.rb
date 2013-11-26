@@ -15,6 +15,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    
+    @question_pack = QuestionPack.find_by_id session[:question_pack_id]
   end
 end
