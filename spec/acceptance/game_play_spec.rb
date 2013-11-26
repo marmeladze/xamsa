@@ -30,5 +30,9 @@ describe "Game", type: :request, js: true do
     expect(current_path).to eql(game_path(:play))
 
     expect(page).to have_content 'Bakı şəhəri məhz bu dənizin sahilində yerləşir'
+
+    expect(page.evaluate_script("$('.answer-box').is(':hidden')")).to  be_true
+    click_on 'STOP'
+    expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
   }
 end
