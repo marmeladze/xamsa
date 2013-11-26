@@ -21,6 +21,10 @@ describe GamesController do
       expect(get("/games/play")).to route_to("games#show", id: "play")
     end
 
+    it "routes to #answer" do
+      expect(post("/games/answer")).to route_to("games#answer")
+    end
+
     xit "routes to #destroy" do
       expect(delete("/games/1")).to route_to("games#destroy", :id => "1")
     end
@@ -38,6 +42,10 @@ describe GamesController do
 
     it "game_path" do
       expect(game_path(:play)).to eq("/games/play")
+    end
+
+    it "answer_games_path" do
+      expect(answer_games_path).to eq("/games/answer")
     end
   end
 end
