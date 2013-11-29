@@ -4,9 +4,6 @@ if ENV['coverage'] == 'on' or ENV['TRAVIS']
   require 'simplecov'
   require 'coveralls'
 
-  Coveralls.wear!('rails')
-
-  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
   SimpleCov.start 'rails' do
     minimum_coverage 100
     add_filter '/.gems'
