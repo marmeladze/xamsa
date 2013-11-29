@@ -7,10 +7,5 @@ ready = ->
   $('#stop-button').on 'click', ->
     $('.answer-box').removeClass('hidden')
 
-  $("#answer-input").on 'keydown', (e) ->
-    if e.which is 13
-      $('#result-box').text('Cavab doğrudur!')
-
-
 $(document).ready(ready)
 $(document).on('page:load', ready)

@@ -6,7 +6,9 @@ describe "Game", type: :request, js: true do
     # populate db with question packs
     5.times do
       question_pack = create :question_pack
-      (1..5).each { |order| create :question, question_pack: question_pack, order: order }
+      
+      create :question, question_pack: question_pack, order: 1
+      create :question, :second, question_pack: question_pack, order: 2
     end
   end
 
@@ -29,17 +31,31 @@ describe "Game", type: :request, js: true do
     # when there's last question pack left it should be redirected to the game play page
     expect(current_path).to eql(game_path(:play))
 
+    # try first question
     expect(page).to have_content 'Bakı şəhəri məhz bu dənizin sahilində yerləşir'
 
     expect(page.evaluate_script("$('.answer-box').is(':hidden')")).to  be_true
     click_on 'STOP'
     expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
 
-    fill_in 'answer', with: "Xəzər\n"
+    fill_in 'answer', with: 'Xəzər'
 
     expect(page).to_not have_content 'Cavab doğrudur!'
     # trigger ENTER on the #answer-input
-    page.execute_script("$('#answer-input').trigger(jQuery.Event('keydown', { which: 13 }));")
+    page.execute_script("$('.answer-box form').submit()")
+    expect(page).to have_content 'Cavab doğrudur!'
+
+    # try second question
+    expect(page).to have_content 'Məhz bu komanda 90-cı illərdə Azərbaycanı Şən və Hazırcavablar Klubunun Yüksək Liqasında təmsil etmişdir.'
+
+    expect(page.evaluate_script("$('.answer-box').is(':hidden')")).to  be_true
+    click_on 'STOP'
+    expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
+
+    fill_in 'answer', with: 'Bakılı oğlanlar'
+
+    # trigger ENTER on the #answer-input
+    page.execute_script("$('.answer-box form').submit()")
     expect(page).to have_content 'Cavab doğrudur!'
   }
 end
