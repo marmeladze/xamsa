@@ -34,5 +34,12 @@ describe "Game", type: :request, js: true do
     expect(page.evaluate_script("$('.answer-box').is(':hidden')")).to  be_true
     click_on 'STOP'
     expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
+
+    fill_in 'answer', with: "Xəzər\n"
+
+    expect(page).to_not have_content 'Cavab doğrudur!'
+    # trigger ENTER on the #answer-input
+    page.execute_script("$('#answer-input').trigger(jQuery.Event('keydown', { which: 13 }));")
+    expect(page).to have_content 'Cavab doğrudur!'
   }
 end
