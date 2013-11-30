@@ -16,8 +16,8 @@ class GamesController < ApplicationController
   end
 
   def show
-    @question_pack = QuestionPack.find_by_id session[:question_pack_id]
     session[:question_order] ||= 1
+    @question = QuestionPack.find_by_id(session[:question_pack_id]).questions.where(order: session[:question_order]).first
   end
 
   def answer
