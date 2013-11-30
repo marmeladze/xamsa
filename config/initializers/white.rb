@@ -1,0 +1,1 @@
+$white = Text::WhiteSimilarity.new

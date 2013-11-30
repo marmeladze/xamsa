@@ -14,9 +14,11 @@ json = ActiveSupport::JSON.decode(File.read('db/seeds/acilis_oyun.json'))
 json.each do |question_pack_hash|
   question_pack = QuestionPack.create!(title: question_pack_hash['title'])
   question_pack_hash['questions'].each do |question_hash|
-    question_pack.questions.build(
+    question = question_pack.questions.build(
       text:  question_hash['text'],
       order: question_hash['order']
-    ).save!
+    )
+    question.save!
+    question.build_answer(text: question_hash['answer']['text']).save!
   end
 end

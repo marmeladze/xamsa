@@ -4,23 +4,38 @@
     "questions": [
       {
         "text": "Bakı şəhəri məhz bu dənizin sahilində yerləşir.",
-        "order": 1
+        "order": 1,
+        "answer": {
+          "text": "Xəzər"
+        }
       },
       {
         "text": "Məhz bu komanda 90-cı illərdə Azərbaycanı Şən və Hazırcavablar Klubunun Yüksək Liqasında təmsil etmişdir",
-        "order": 2
+        "order": 2,
+        "answer": {
+          "text": "Bakılı oğlanlar"
+        }
       },
       {
         "text": "“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.",
-        "order": 3
+        "order": 3,
+        "answer": {
+          "text": "Sergey Yesenin"
+        }
       },
       {
         "text": "Ceyms Bond seriyasından olan bu filmin çəkilişləri həm də Bakıda aparılmışdır.",
-        "order": 4
+        "order": 4,
+        "answer": {
+          "text": "Bir dünya da azdır"
+        }
       },
       {
         "text": "Bakının qardaşlaşmış olduğu Vunq Tau şəhəri məhz bu ölkədə yerləşir.",
-        "order": 5
+        "order": 5,
+        "answer": {
+          "text": "Vyetnam"
+        }
       }
     ]
   },
@@ -29,23 +44,38 @@
     "questions": [
       {
         "text": "Bakı şəhəri məhz bu dənizin sahilində yerləşir.",
-        "order": 1
+        "order": 1,
+        "answer": {
+          "text": "Xəzər"
+        }
       },
       {
         "text": "Məhz bu komanda 90-cı illərdə Azərbaycanı Şən və Hazırcavablar Klubunun Yüksək Liqasında təmsil etmişdir",
-        "order": 2
+        "order": 2,
+        "answer": {
+          "text": "Bakılı oğlanlar"
+        }
       },
       {
         "text": "“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.",
-        "order": 3
+        "order": 3,
+        "answer": {
+          "text": "Sergey Yesenin"
+        }
       },
       {
         "text": "Ceyms Bond seriyasından olan bu filmin çəkilişləri həm də Bakıda aparılmışdır.",
-        "order": 4
+        "order": 4,
+        "answer": {
+          "text": "Bir dünya da azdır"
+        }
       },
       {
         "text": "Bakının qardaşlaşmış olduğu Vunq Tau şəhəri məhz bu ölkədə yerləşir.",
-        "order": 5
+        "order": 5,
+        "answer": {
+          "text": "Vyetnam"
+        }
       }
     ]
   },
@@ -54,23 +84,38 @@
     "questions": [
       {
         "text": "Bakı şəhəri məhz bu dənizin sahilində yerləşir.",
-        "order": 1
+        "order": 1,
+        "answer": {
+          "text": "Xəzər"
+        }
       },
       {
         "text": "Məhz bu komanda 90-cı illərdə Azərbaycanı Şən və Hazırcavablar Klubunun Yüksək Liqasında təmsil etmişdir",
-        "order": 2
+        "order": 2,
+        "answer": {
+          "text": "Bakılı oğlanlar"
+        }
       },
       {
         "text": "“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.",
-        "order": 3
+        "order": 3,
+        "answer": {
+          "text": "Sergey Yesenin"
+        }
       },
       {
         "text": "Ceyms Bond seriyasından olan bu filmin çəkilişləri həm də Bakıda aparılmışdır.",
-        "order": 4
+        "order": 4,
+        "answer": {
+          "text": "Bir dünya da azdır"
+        }
       },
       {
         "text": "Bakının qardaşlaşmış olduğu Vunq Tau şəhəri məhz bu ölkədə yerləşir.",
-        "order": 5
+        "order": 5,
+        "answer": {
+          "text": "Vyetnam"
+        }
       }
     ]
   },
@@ -79,23 +124,38 @@
     "questions": [
       {
         "text": "Bakı şəhəri məhz bu dənizin sahilində yerləşir.",
-        "order": 1
+        "order": 1,
+        "answer": {
+          "text": "Xəzər"
+        }
       },
       {
         "text": "Məhz bu komanda 90-cı illərdə Azərbaycanı Şən və Hazırcavablar Klubunun Yüksək Liqasında təmsil etmişdir",
-        "order": 2
+        "order": 2,
+        "answer": {
+          "text": "Bakılı oğlanlar"
+        }
       },
       {
         "text": "“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.",
-        "order": 3
+        "order": 3,
+        "answer": {
+          "text": "Sergey Yesenin"
+        }
       },
       {
         "text": "Ceyms Bond seriyasından olan bu filmin çəkilişləri həm də Bakıda aparılmışdır.",
-        "order": 4
+        "order": 4,
+        "answer": {
+          "text": "Bir dünya da azdır"
+        }
       },
       {
         "text": "Bakının qardaşlaşmış olduğu Vunq Tau şəhəri məhz bu ölkədə yerləşir.",
-        "order": 5
+        "order": 5,
+        "answer": {
+          "text": "Vyetnam"
+        }
       }
     ]
   },
@@ -104,23 +164,38 @@
     "questions": [
       {
         "text": "Bakı şəhəri məhz bu dənizin sahilində yerləşir.",
-        "order": 1
+        "order": 1,
+        "answer": {
+          "text": "Xəzər"
+        }
       },
       {
         "text": "Məhz bu komanda 90-cı illərdə Azərbaycanı Şən və Hazırcavablar Klubunun Yüksək Liqasında təmsil etmişdir",
-        "order": 2
+        "order": 2,
+        "answer": {
+          "text": "Bakılı oğlanlar"
+        }
       },
       {
         "text": "“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.",
-        "order": 3
+        "order": 3,
+        "answer": {
+          "text": "Sergey Yesenin"
+        }
       },
       {
         "text": "Ceyms Bond seriyasından olan bu filmin çəkilişləri həm də Bakıda aparılmışdır.",
-        "order": 4
+        "order": 4,
+        "answer": {
+          "text": "Bir dünya da azdır"
+        }
       },
       {
         "text": "Bakının qardaşlaşmış olduğu Vunq Tau şəhəri məhz bu ölkədə yerləşir.",
-        "order": 5
+        "order": 5,
+        "answer": {
+          "text": "Vyetnam"
+        }
       }
     ]
   }

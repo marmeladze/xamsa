@@ -22,6 +22,8 @@ class GamesController < ApplicationController
 
   def answer
     question_pack = QuestionPack.find_by_id session[:question_pack_id]
+    @result = question_pack.questions.where(order: session[:question_order]).first.check_answer params[:answer]
+
     session[:question_order] += 1
     @question = question_pack.questions.where(order: session[:question_order]).first
 

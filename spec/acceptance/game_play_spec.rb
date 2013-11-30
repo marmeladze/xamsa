@@ -8,7 +8,8 @@ describe "Game", type: :request, js: true do
       question_pack = create :question_pack
       
       create :question, question_pack: question_pack, order: 1
-      create :question, :second, question_pack: question_pack, order: 2
+      create :question, :second, question_pack: question_pack
+      create :question, :with_answer, question_pack: question_pack
     end
   end
 
@@ -38,7 +39,7 @@ describe "Game", type: :request, js: true do
     click_on 'STOP'
     expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
 
-    fill_in 'answer', with: 'Xəzər'
+    fill_in 'answer', with: 'MyString'
 
     expect(page).to_not have_content 'Cavab doğrudur!'
     # trigger ENTER on the #answer-input
@@ -52,10 +53,23 @@ describe "Game", type: :request, js: true do
     click_on 'STOP'
     expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
 
-    fill_in 'answer', with: 'Bakılı oğlanlar'
+    fill_in 'answer', with: 'MyString'
 
     # trigger ENTER on the #answer-input
     page.execute_script("$('.answer-box form').submit()")
     expect(page).to have_content 'Cavab doğrudur!'
+
+    # try third question
+    expect(page).to have_content '“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.'
+
+    expect(page.evaluate_script("$('.answer-box').is(':hidden')")).to  be_true
+    click_on 'STOP'
+    expect(page.evaluate_script("$('.answer-box').is(':visible')")).to be_true
+
+    fill_in 'answer', with: 'MyString'
+
+    # trigger ENTER on the #answer-input
+    page.execute_script("$('.answer-box form').submit()")
+    expect(page).to have_content 'Cavab səhvdir!'
   }
 end

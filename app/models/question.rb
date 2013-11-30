@@ -7,4 +7,10 @@ class Question < ActiveRecord::Base
   validates_uniqueness_of :order, scope: :question_pack_id
 
   belongs_to :question_pack
+  has_one :answer, dependent: :destroy
+
+  def check_answer(submitted_answer)
+    similarity = $white.similarity answer.text, submitted_answer
+    similarity >= 0.6
+  end
 end
