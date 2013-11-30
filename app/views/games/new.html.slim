@@ -2,5 +2,6 @@ ul#question_packs
   = form_tag games_path, method: :post
     - @question_packs.each do |question_pack|
       li
+        span class="glyphicon glyphicon-ban-circle"
         = question_pack.title
         = hidden_field_tag 'question_pack', question_pack.id
