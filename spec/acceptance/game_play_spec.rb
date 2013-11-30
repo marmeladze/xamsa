@@ -59,7 +59,7 @@ describe "Game", type: :request, js: true do
     page.execute_script("$('.answer-box form').submit()")
     expect(page).to have_content 'Cavab doğrudur!'
 
-    # try third question
+    # try third question with wrong answer
     expect(page).to have_content '“Əlvida, Bakı! Səni bir daha görməyəcəyəm” misraları ilə başlayan şeir bu rus şairin qələminə məxsusdur.'
 
     expect(page.evaluate_script("$('.answer-box').is(':hidden')")).to  be_true
