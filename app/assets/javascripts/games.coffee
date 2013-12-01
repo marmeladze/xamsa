@@ -1,4 +1,4 @@
-intervalId = null
+source = null
 
 ready = ->
   $('#question_packs li').on 'click', ->
@@ -11,11 +11,10 @@ ready = ->
     $('.answer-button').addClass 'answer-button-pressed'
     $('input.answer').show().focus()
     pause()
-  $('input.answer').on 'keypress', (e) ->
-    console.log e.which
 
   if $('#play').length > 0
     timer()
+    live_play()
 
 timer = () ->
   timeout = parseInt($('.timeout span').text()) * 1000
@@ -28,6 +27,7 @@ timer = () ->
     else
       clearInterval intervalId
       console.log 'time is up!'
+      Turbolinks.visit '/games/play'
 
   intervalId = setInterval countdown, 1000
 
@@ -38,7 +38,23 @@ timer = () ->
 pause = () ->
   $('.green-bar').pause()
   $('.red-bar').pause()
-  clearInterval intervalId
+  source.close()
+  # add more seconds for thinking
+  value = parseInt $('.timeout span').text()
+  $('.timeout span').text(value + 10)
+
+live_play = () ->
+  source = new EventSource '/live/play'
+
+  source.addEventListener 'game.char', (e) ->
+    data = $.parseJSON e.data
+
+    $char = $('<span>').text(data.char).hide()
+    $('#question').append $char
+    $char.fadeIn 'slow'
+
+  source.addEventListener 'game.questionEnd', (e) ->
+    source.close()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

@@ -1,7 +1,5 @@
 #play
-  #question.question= @question.text
-
-  #result-box
+  #question.question= "#{session[:question_order]}. "
 
   .answer-bar-wrapper
     .answer-bar
@@ -9,7 +7,7 @@
         .green-bar
       .timeout
         i class="glyphicon glyphicon-time"
-        span= @question.text.split.count + 5
+        span= @question_word_count + 5
         = ' san'
       = form_tag answer_games_path, method: :post, remote: true
         =text_field_tag :answer, nil, id: 'answer-input', class: 'answer form-control input-lg'
