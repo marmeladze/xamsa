@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails',                '4.0.1'
-gem 'unicorn',              '~> 4.7.0'
-gem 'unicorn-worker-killer', '~> 0.4.2'
+gem 'puma',                 '~> 2.6.0'
 gem 'secure_headers',       '~> 1.1.0'
 gem 'jquery-rails',         '3.0.4'
 gem 'turbolinks'
