@@ -1,10 +1,15 @@
-#question= @question.text
+#play
+  #question.question= @question.text
 
-#result-box
+  #result-box
 
-= button_tag 'STOP', type: 'button', id: 'stop-button'
-
-div class="answer-box hidden"
-  = form_tag answer_games_path, method: :post, remote: true
-    =label_tag :answer, 'Cavab'
-    =text_field_tag :answer, nil, id: 'answer-input'
+  .answer-bar-wrapper
+    .answer-bar
+      .red-bar
+        .green-bar
+      .timeout
+        span= @question.text.split.count + 5
+        = ' san'
+      = form_tag answer_games_path, method: :post, remote: true
+        =text_field_tag :answer, nil, id: 'answer-input', class: 'answer form-control input-lg'
+      = button_tag '', type: 'button', id: 'stop-button', class: 'answer-button'

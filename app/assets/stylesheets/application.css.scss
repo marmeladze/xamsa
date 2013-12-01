@@ -96,4 +96,86 @@ body {
       }
     }
   }
+
+  .question {
+    text-align: left;
+    width: 66%;
+    margin: 0 auto;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 16pt;
+  }
+
+  .answer-bar-wrapper {
+    width: 960px;
+    height: 62px;
+    // background: image-url("answer-bar.jpg");
+    padding-top: 5px;
+
+    .answer-bar {
+      -webkit-border-radius: 90px;
+      -moz-border-radius: 90px;
+      border-radius: 90px;
+      width: 700px;
+      border: 3px #d4d4d4 solid;
+      background: white;
+      margin: 3px auto;
+
+      .red-bar {
+        -webkit-border-radius: 90px;
+        -moz-border-radius: 90px;
+        border-radius: 90px;
+        @include background-image(linear-gradient(to bottom, #FF0000 0%, #EF7575 100%));
+        width: 24%;
+
+        .green-bar {
+          width: 100%;
+          height: 50px;
+          @include background-image(linear-gradient(to bottom, #009846 0%, #3FD288 100%));
+          -webkit-border-radius: 90px;
+          -moz-border-radius: 90px;
+          border-radius: 90px;
+        }
+      }
+
+      .timeout {
+        position: absolute;
+        color: white;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+        font-size: 16pt;
+        margin-top: -36px;
+        margin-left: 40px;
+        background: asset-url("timer.png") no-repeat left;
+        padding-left: 30px;
+      }
+
+      input.answer {
+        position: absolute;
+        width: 286px;
+        margin: 0;
+        margin-top: -47px;
+        margin-left: 200px;
+        display: none;
+      }
+
+      .answer-button {
+        width: 50px;
+        height: 50px;
+        margin-top: -50px;
+        margin-left: 301px;
+        float: right;
+        background: asset-url("answer-button.png");
+        background-position: 0px 0px;
+        border: 0;
+        cursor: pointer;
+
+        &:active {
+          background-position: -50px 0px;
+        }
+      }
+      .answer-button-pressed {
+        background-position: -50px 0px;
+        cursor: default;
+      }
+    }
+  }
 }
