@@ -8,6 +8,7 @@
       .red-bar
         .green-bar
       .timeout
+        i class="glyphicon glyphicon-time"
         span= @question.text.split.count + 5
         = ' san'
       = form_tag answer_games_path, method: :post, remote: true

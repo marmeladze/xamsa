@@ -144,8 +144,15 @@ body {
         font-size: 16pt;
         margin-top: -40px;
         margin-left: 40px;
-        background: asset-url("timer.png") no-repeat left;
-        padding-left: 30px;
+
+        i {
+          position: absolute;
+          margin-top: 3px;
+        }
+
+        span {
+          margin-left: 30px;
+        }
       }
 
       input.answer {
