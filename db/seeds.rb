@@ -13,7 +13,7 @@ QuestionPack.destroy_all
 puts 'adding Question Packs...'
 json = ActiveSupport::JSON.decode(open(ENV["SEED_FILE_1"]).read)
 json.each_with_index do |question_pack_hash, index|
-  puts "#{index + 1}. #{question_pack_hash['title']}".green
+  puts "#{index + 1}. #{question_pack_hash['title']}"
   question_pack = QuestionPack.create!(title: question_pack_hash['title'])
   question_pack_hash['questions'].each do |question_hash|
     question = question_pack.questions.build(
