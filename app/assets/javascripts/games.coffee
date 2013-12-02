@@ -2,6 +2,7 @@ source = null
 intervalId = null
 
 ready = ->
+  clearInterval intervalId
   $('#question_packs li').on 'click', ->
     $(this).fadeOut 'fast', () ->
       $(this).remove()
@@ -18,7 +19,6 @@ ready = ->
     live_play()
 
 timer = () ->
-  clearInterval intervalId
   timeout = parseInt($('.timeout span').text()) * 1000
 
   countdown = () ->
