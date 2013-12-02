@@ -99,6 +99,14 @@ body {
     }
   }
 
+  #score-box {
+    display: block;
+    float: right;
+    padding: 5px 10px;
+    background: yellow;
+    border-radius: 5px;
+  }
+
   h2 {
     text-align: center;
   }

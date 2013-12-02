@@ -1,4 +1,5 @@
 ul#question_packs
+  #score-box= "Sizin #{session[:score]} xalınız var"
   = form_tag games_path, method: :post
     - @question_packs.each do |question_pack|
       li

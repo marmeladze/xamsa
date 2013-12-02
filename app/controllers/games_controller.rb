@@ -6,6 +6,8 @@ class GamesController < ApplicationController
 
   def new
     @question_packs = QuestionPack.limit(5).order("RANDOM()")
+
+    session[:score] ||= 0
   end
 
   def create
@@ -32,8 +34,10 @@ class GamesController < ApplicationController
     
     if result
       flash[:result] = 'Cavab doğrudur!'
+      session[:score] += session[:question_order].to_i * 100
     else
       flash[:result] = "Cavab səhvdir! Düzgün cavab: #{answer.text}"
+      session[:score] -= session[:question_order].to_i * 100
     end
   end
 end
