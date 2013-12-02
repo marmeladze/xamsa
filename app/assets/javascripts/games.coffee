@@ -53,7 +53,7 @@ live_play = () ->
 
     $char = $('<span>').text(data.char).hide()
     $('#question').append $char
-    $char.fadeIn 'slow'
+    $char.fadeIn 'fast'
 
   source.addEventListener 'game.questionEnd', (e) ->
     source.close()
