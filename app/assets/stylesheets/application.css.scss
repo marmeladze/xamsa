@@ -21,6 +21,17 @@ body {
   max-width: 1050px;
 }
 
+#main-container {
+  border-style: solid;
+  border-width: 0px 45px;
+  -moz-border-image: image-url("container-border.png") 21 45 42 repeat;
+  -webkit-border-image: image-url("container-border.png") 21 45 42 repeat;
+  -o-border-image: image-url("container-border.png") 21 45 42 repeat;
+  border-image: image-url("container-border.png") 21 45 42 fill repeat;
+  padding: 0;
+}
+
+
 .navbar {
   height: 48px;
   background: image-url("navbar.png");
@@ -40,6 +51,10 @@ body {
       vertical-align: sub;
       margin-right: 4px;
     }
+  }
+
+  .navbar-right {
+    padding-top: 13px;
   }
 }
 
