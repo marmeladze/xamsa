@@ -5,13 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'open-uri'
 
 puts 'destroying all Question Packs...'
 QuestionPack.destroy_all
 
 puts 'adding Question Packs...'
-json = ActiveSupport::JSON.decode(File.read('db/seeds/acilis_oyun.json'))
-json.each do |question_pack_hash|
+json = ActiveSupport::JSON.decode(open(ENV["SEED_FILE_1"]).read)
+json.each_with_index do |question_pack_hash, index|
+  puts "#{index + 1}. #{question_pack_hash['title']}".green
   question_pack = QuestionPack.create!(title: question_pack_hash['title'])
   question_pack_hash['questions'].each do |question_hash|
     question = question_pack.questions.build(
