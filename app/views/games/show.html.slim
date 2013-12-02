@@ -1,16 +1,21 @@
 #play
   h2= @question_pack.title
-  #score-box= "Sizin #{session[:score]} xalınız var"
-  #question.question= "#{session[:question_order]}. "
+  .row
+    .col-md-3.col-md-offset-9
+      #score-box= "Sizin #{session[:score]} xalınız var"
+  .row
+    #question.question= "#{session[:question_order]}. "
 
-  .answer-bar-wrapper
-    .answer-bar
-      .red-bar
-        .green-bar
-      .timeout
-        i class="glyphicon glyphicon-time"
-        span= @question_word_count + 5
-        = ' san'
-      = form_tag answer_games_path, method: :post, remote: true
-        =text_field_tag :answer, nil, id: 'answer-input', class: 'answer form-control input-lg'
-      = button_tag '', type: 'button', id: 'stop-button', class: 'answer-button'
+  .row
+    .answer-bar-wrapper.col-md-12
+      .col-md-10.col-md-offset-1
+        .answer-bar
+          .red-bar
+            .green-bar
+          .timeout
+            i class="glyphicon glyphicon-time"
+            span= @question_word_count + 5
+            = ' san'
+          = form_tag answer_games_path, method: :post, remote: true
+            =text_field_tag :answer, nil, id: 'answer-input', class: 'answer form-control input-lg'
+          = button_tag '', type: 'button', id: 'stop-button', class: 'answer-button'
