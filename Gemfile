@@ -16,6 +16,7 @@ gem 'rack-canonical-host',  '0.0.8'
 gem 'bourbon',              '3.1.8'
 gem 'devise',               '~> 3.2.1'
 gem 'text',                 '~> 1.2.3'
+gem "colored",              '1.2', require: false
 # gem 'paperclip',            '3.4.2'
 # gem 'aws-sdk',              '1.11.2'
 # gem 'paranoia',             '1.2.0'
@@ -30,7 +31,6 @@ group :development do
   gem 'better_errors',      '~> 1.0.1'
   gem 'binding_of_caller',  '0.7.2'
   gem "letter_opener",      '~> 1.1.2'
-  gem "colored",            '1.2', require: false
   # gem 'guard-rspec',        '3.0.2'
 end
 
