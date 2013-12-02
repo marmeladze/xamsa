@@ -25,12 +25,14 @@ class GamesController < ApplicationController
   end
 
   def answer
-    question_pack = QuestionPack.find_by_id session[:question_pack_id]
+    answer = QuestionPack.find_by_id(session[:question_pack_id]).questions.where(order: session[:question_order]).first.answer
+
+    result = answer.check params[:answer]
     
-    if question_pack.questions.where(order: session[:question_order]).first.check_answer params[:answer]
+    if result
       flash[:result] = 'Cavab doğrudur!'
     else
-      flash[:result] = 'Cavab səhvdir!'
+      flash[:result] = "Cavab səhvdir! Düzgün cavab: #{answer.text}"
     end
   end
 end
