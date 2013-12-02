@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   end
 
   def new
-    @question_packs = QuestionPack.limit 5
+    @question_packs = QuestionPack.limit(5).order("RANDOM()")
   end
 
   def create
