@@ -1,4 +1,5 @@
 source = null
+intervalId = null
 
 ready = ->
   $('#question_packs li').on 'click', ->
@@ -17,6 +18,7 @@ ready = ->
     live_play()
 
 timer = () ->
+  clearInterval intervalId
   timeout = parseInt($('.timeout span').text()) * 1000
 
   countdown = () ->

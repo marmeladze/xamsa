@@ -20,7 +20,8 @@ class GamesController < ApplicationController
       redirect_to new_game_path
     else
       session[:question_order] += 1
-      @question_word_count = QuestionPack.find_by_id(session[:question_pack_id]).questions.where(order: session[:question_order]).first.text.split.count
+      @question_pack = QuestionPack.find_by_id(session[:question_pack_id])
+      @question_word_count = @question_pack.questions.where(order: session[:question_order]).first.text.split.count
     end
   end
 
