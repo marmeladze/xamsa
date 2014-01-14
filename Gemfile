@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.0"
 
-gem 'rails',                '4.0.1'
+gem 'rails',                '4.0.2'
 gem 'puma',                 '~> 2.6.0'
 gem 'secure_headers',       '~> 1.1.0'
 gem 'jquery-rails',         '3.0.4'
@@ -19,7 +19,7 @@ gem 'text',                 '~> 1.2.3'
 gem "colored",              '1.2', require: false
 # gem 'paperclip',            '3.4.2'
 # gem 'aws-sdk',              '1.11.2'
-# gem 'paranoia',             '1.2.0'
+# gem 'cd',             '1.2.0'
 # gem 'omniauth',             '1.1.4'
 # gem 'omniauth-facebook',    '1.4.1'
 # gem 'kaminari',             '0.14.1'
@@ -57,10 +57,3 @@ end
 group :production do
   gem 'rails_12factor', '0.0.2'
 end
-
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
