@@ -7,11 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'open-uri'
 
+puts 'adding Question Packs...'
+begin
+json = ActiveSupport::JSON.decode(open(ENV["SEED_FILE_1"]).read)
+
 puts 'destroying all Question Packs...'
 QuestionPack.destroy_all
-
-puts 'adding Question Packs...'
-json = ActiveSupport::JSON.decode(open(ENV["SEED_FILE_1"]).read)
 json.each_with_index do |question_pack_hash, index|
   puts "#{index + 1}. #{question_pack_hash['title']}"
   question_pack = QuestionPack.create!(title: question_pack_hash['title'])
@@ -23,4 +24,7 @@ json.each_with_index do |question_pack_hash, index|
     question.save!
     question.build_answer(text: question_hash['answer']['text']).save!
   end
+end
+rescue
+  puts "didn't load any"
 end
