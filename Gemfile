@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
+
 ruby "2.1.0"
 
 gem 'rails',                '4.0.2'
@@ -24,6 +26,9 @@ gem "colored",              '1.2', require: false
 # gem 'omniauth-facebook',    '1.4.1'
 # gem 'kaminari',             '0.14.1'
 # gem 'acts_as_hashed',       '1.0.0'
+
+# rails-assets
+gem 'rails-assets-bootstrap', '~> 3.0.0'
 
 group :development do
   gem 'foreman',            '0.63.0'
