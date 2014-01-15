@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby "2.1.0"
 
 gem 'rails',                '4.0.2'
-gem 'puma',                 '~> 2.6.0'
+gem 'puma',                 '~> 2.7.1'
 gem 'secure_headers',       '~> 1.1.0'
 gem 'jquery-rails',         '3.0.4'
 gem 'turbolinks'
-gem 'jbuilder',             '~> 1.2'
+gem 'jbuilder',             '~> 2.0.2'
 gem 'slim',                 '~> 2.0.2'
-gem 'pg',                   '0.17.0'
+gem 'pg',                   '0.17.1'
 gem 'sass-rails',         '~> 4.0.0'
 gem 'coffee-rails',       '~> 4.0.0'
 gem 'uglifier',           '>= 1.3.0'
@@ -28,20 +28,20 @@ gem "colored",              '1.2', require: false
 group :development do
   gem 'foreman',            '0.63.0'
   gem 'jumpup',             '0.0.1'
-  gem 'better_errors',      '~> 1.0.1'
+  gem 'better_errors',      '~> 1.1.0'
   gem 'binding_of_caller',  '0.7.2'
-  gem "letter_opener",      '~> 1.1.2'
+  gem "letter_opener",      '~> 1.2.0'
   # gem 'guard-rspec',        '3.0.2'
 end
 
 group :test do
   # See https://github.com/thoughtbot/shoulda-matchers/issues/270
-  gem "shoulda-matchers",   '2.4.0'
+  gem "shoulda-matchers",   '~> 2.5.0'
   gem 'simplecov',          '~> 0.8.2', require: false
   gem 'coveralls', require: false
   gem 'email_spec',         '~> 1.5.0'
-  gem 'capybara',           '~> 2.1.0'
-  gem 'poltergeist',        '~> 1.4.1'
+  gem 'capybara',           '~> 2.2.1'
+  gem 'poltergeist',        '~> 1.5.0'
   # gem 'webmock',            '1.11.0'
   # gem 'timecop',            '0.6.1'
 end
