@@ -15,7 +15,7 @@ describe "Game", type: :request, js: true do
 
   login!
 
-  it {
+  xit {
     visit games_path
     
     # game#index page

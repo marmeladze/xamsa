@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :answer do
-    text "MyString"
+    text "Bakı"
     question nil
   end
 end
