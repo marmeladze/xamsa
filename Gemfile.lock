@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
   specs:
+    aasm (3.0.26)
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
       mail (~> 2.5.4)
@@ -225,6 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm (= 3.0.26)
   awesome_print (~> 1.2.0)
   better_errors (~> 1.1.0)
   binding_of_caller (= 0.7.2)

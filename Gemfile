@@ -19,6 +19,7 @@ gem 'bourbon',                '3.1.8'
 gem 'devise',              '~> 3.2.1'
 gem 'text',                '~> 1.2.3'
 gem "colored",                '1.2', require: false
+gem 'aasm',                   '3.0.26'
 
 # rails-assets
 gem 'rails-assets-bootstrap', '~> 3.0.0'
