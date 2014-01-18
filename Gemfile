@@ -26,7 +26,7 @@ gem 'rails-assets-bootstrap', '~> 3.0.0'
 
 group :development do
   gem 'foreman',                '0.63.0'
-  gem 'jumpup',                 '0.0.1'
+  gem 'jumpup',                 '0.0.3'
   gem 'better_errors',       '~> 1.1.0'
   gem 'binding_of_caller',      '0.7.2'
   gem "letter_opener",       '~> 1.2.0'

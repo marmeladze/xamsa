@@ -98,11 +98,12 @@ INTEGRATION_TASKS = %w(
   integration:heroku:add_remote
   integration:heroku:check
   integration:heroku:lock
-  integration:start
-  integration:bundle_install
+  jumpup:start
+  jumpup:bundle_install
   db:migrate
   spec
-  integration:finish
+  jumpup:coverage_verify
+  jumpup:finish
   integration:heroku:deploy
   integration:heroku:unlock
 )
