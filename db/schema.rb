@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202035007) do
+ActiveRecord::Schema.define(version: 20140117004430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,27 @@ ActiveRecord::Schema.define(version: 20131202035007) do
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
+
+  create_table "games", force: true do |t|
+    t.string   "aasm_state"
+    t.integer  "player1_id"
+    t.integer  "player1_score"
+    t.integer  "player2_id"
+    t.integer  "player2_score"
+    t.integer  "player3_id"
+    t.integer  "player3_score"
+    t.integer  "player4_id"
+    t.integer  "player4_score"
+    t.integer  "question_pack_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "games", ["player1_id"], name: "index_games_on_player1_id", using: :btree
+  add_index "games", ["player2_id"], name: "index_games_on_player2_id", using: :btree
+  add_index "games", ["player3_id"], name: "index_games_on_player3_id", using: :btree
+  add_index "games", ["player4_id"], name: "index_games_on_player4_id", using: :btree
+  add_index "games", ["question_pack_id"], name: "index_games_on_question_pack_id", using: :btree
 
   create_table "players", force: true do |t|
     t.string   "email",                  default: "", null: false
