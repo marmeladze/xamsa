@@ -6,7 +6,8 @@ class GamesController < ApplicationController
 
   def new
     @question_packs = QuestionPack.limit(5).order("RANDOM()")
-
+    #below line calls 2 queries, but performs quicker than above
+    #@question_packs = QuestionPack.where(id: QuestionPack.pluck(:id).shuffle[0..4])
     session[:score] ||= 0
   end
 
